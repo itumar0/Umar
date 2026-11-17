@@ -9,7 +9,7 @@ window.AZALIA = {
   whatsapp: "996707739707",                 // номер для wa.me (только цифры)
   phoneDisplay: "+996 707 739 707",
   address: "г. Бишкек, ул. Токтогула, 241",
-  hours: "Ежедневно 8:00 — 22:00",          // [ЗАМЕНИТЬ]
+  hours: "Ежедневно 8:00 — 22:00",
   instagram: "azalia.cheesecake",           // без @
   map2gis: "https://2gis.kg/bishkek/geo/70000001109779369", // карточка «Азалия» в 2ГИС
   timezone: "Asia/Bishkek",
