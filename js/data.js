@@ -42,17 +42,46 @@ window.AZALIA = {
   ],
 
   /* --- Чизкейки ---
-     [ЗАМЕНИТЬ] названия и файлы — по загруженным фото, без изменений.
+     Названия и фото — по присланным файлам.
      special: true — цена Сан-Себастьяна (300 / 275 по пятницам). */
   cheesecakes: [
-    { id: "c-sansebastian", name: "Сан-Себастьян", img: "images/cheesecakes/san-sebastian.jpg", special: true },
-    { id: "c-lotus", name: "Lotus", img: "images/cheesecakes/lotus.jpg" },
-    { id: "c-classic", name: "Классический", img: "images/cheesecakes/classic.jpg" },
-    { id: "c-pistachio", name: "Фисташковый", img: "images/cheesecakes/pistachio.jpg" },
-    { id: "c-chocolate", name: "Шоколадный", img: "images/cheesecakes/chocolate.jpg" },
-    { id: "c-raspberry", name: "Малиновый", img: "images/cheesecakes/raspberry.jpg" },
-    { id: "c-mango", name: "Манго-маракуйя", img: "images/cheesecakes/mango.jpg" },
-    { id: "c-caramel", name: "Солёная карамель", img: "images/cheesecakes/caramel.jpg" }
+    { id: "c-mango-fistashka", name: "Манго фисташка", img: "images/cheesecakes/mango-fistashka.jpg" },
+    { id: "c-klubnika-kokos", name: "Клубника кокос", img: "images/cheesecakes/klubnika-kokos.jpg" },
+    { id: "c-milka", name: "Милка", img: "images/cheesecakes/milka.jpg" },
+    { id: "c-yagodnyj", name: "Ягодный", img: "images/cheesecakes/yagodnyj.jpg" },
+    { id: "c-limonnyj", name: "Лимонный", img: "images/cheesecakes/limonnyj.jpg" },
+    { id: "c-kinder", name: "Киндер", img: "images/cheesecakes/kinder.jpg" },
+    { id: "c-kinder-country", name: "Киндер country", img: "images/cheesecakes/kinder-country.jpg" },
+    { id: "c-krem-bryule", name: "Крем брюле", img: "images/cheesecakes/krem-bryule.jpg" },
+    { id: "c-malina-mindal", name: "Малина миндаль", img: "images/cheesecakes/malina-mindal.jpg" },
+    { id: "c-shokolad-malina", name: "Шоколад малина", img: "images/cheesecakes/shokolad-malina.jpg" },
+    { id: "c-bananovyj-puding", name: "Банановый пудинг", img: "images/cheesecakes/bananovyj-puding.jpg" },
+    { id: "c-klubnika-ulun", name: "Клубника улун", img: "images/cheesecakes/klubnika-ulun.jpg" },
+    { id: "c-yablochnyj", name: "Яблочный", img: "images/cheesecakes/yablochnyj.jpg" },
+    { id: "c-oblepiha-sgushchenka", name: "Облепиха сгущёнка", img: "images/cheesecakes/oblepiha-sgushchenka.jpg" },
+    { id: "c-matcha-shokolad", name: "Матча шоколад", img: "images/cheesecakes/matcha-shokolad.jpg" },
+    { id: "c-san-sebastyan", name: "Сан-Себастьян", img: "images/cheesecakes/san-sebastyan.jpg", special: true },
+    { id: "c-tviks", name: "Твикс", img: "images/cheesecakes/tviks.jpg" },
+    { id: "c-medovik", name: "Медовик", img: "images/cheesecakes/medovik.jpg" },
+    { id: "c-rafaello", name: "Рафаэлло", img: "images/cheesecakes/rafaello.jpg" },
+    { id: "c-ferrero-rocher", name: "Ферреро Рошер", img: "images/cheesecakes/ferrero-rocher.jpg" },
+    { id: "c-lotus", name: "Лотус", img: "images/cheesecakes/lotus.jpg" },
+    { id: "c-snikers", name: "Сникерс", img: "images/cheesecakes/snikers.jpg" },
+    { id: "c-oreo", name: "Орео", img: "images/cheesecakes/oreo.jpg" },
+    { id: "c-mango-mohito", name: "Манго мохито", img: "images/cheesecakes/mango-mohito.jpg" },
+    { id: "c-fistashka-malina", name: "Фисташка малина", img: "images/cheesecakes/fistashka-malina.jpg" },
+    { id: "c-baunti", name: "Баунти", img: "images/cheesecakes/baunti.jpg" },
+    { id: "c-dubajskij", name: "Дубайский", img: "images/cheesecakes/dubajskij.jpg" },
+    { id: "c-babl-gam", name: "Бабл гам", img: "images/cheesecakes/babl-gam.jpg" },
+    { id: "c-brauni", name: "Брауни", img: "images/cheesecakes/brauni.jpg" },
+    { id: "c-tri-shokolada", name: "Три шоколада", img: "images/cheesecakes/tri-shokolada.jpg" },
+    { id: "c-rafael-malina", name: "Рафаэль малина", img: "images/cheesecakes/rafael-malina.jpg" },
+    { id: "c-mango-marakujya", name: "Манго маракуйя", img: "images/cheesecakes/mango-marakujya.jpg" },
+    { id: "c-banoffi-paj", name: "Баноффи пай", img: "images/cheesecakes/banoffi-paj.jpg" },
+    { id: "c-mars", name: "Марс", img: "images/cheesecakes/mars.jpg" },
+    { id: "c-mango-shokolad", name: "Манго шоколад", img: "images/cheesecakes/mango-shokolad.jpg" },
+    { id: "c-tary-talkan", name: "Тары талкан", img: "images/cheesecakes/tary-talkan.jpg" },
+    { id: "c-chernichnyj", name: "Черничный", img: "images/cheesecakes/chernichnyj.jpg" }
   ],
 
   /* --- Напитки ---

@@ -73,7 +73,7 @@
   const catalog = {};
   const P = D.cheesecakePricing;
   D.breakfast.forEach((it) => (catalog[it.id] = { ...it, cat: "breakfast" }));
-  D.cheesecakes.forEach((it) => (catalog[it.id] = { ...it, cat: "cheesecake", price: it.special ? P.special : P.regular }));
+  D.cheesecakes.forEach((it) => (catalog[it.id] = { ...it, cat: "cheesecake", prefix: "Чизкейк", price: it.special ? P.special : P.regular }));
   const drinkGroups = { milkshakes: "Милкшейк", smoothies: "Смузи", cold: "", tea: "Чай", coffee: "" };
   Object.keys(drinkGroups).forEach((g) => {
     D[g].items.forEach((it) => {

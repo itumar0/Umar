@@ -441,3 +441,12 @@ button { cursor: pointer; }
 /* В конструкторе плашка корзины не перекрывает итог */
 body.in-builder .cartbar { opacity: 0; pointer-events: none; transform: translateY(20px); }
 .cartbar { transition: opacity .25s, transform .25s var(--ease); }
+
+/* Чёрный фон фото мягко переходит в подложку #5A3D2E */
+.card__media::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  box-shadow: inset 0 0 26px 12px #5A3D2E;
+  border-radius: inherit;
+}
+.card__media img { transform: scale(.94); }
+.card:hover .card__media img { transform: scale(.98); }
