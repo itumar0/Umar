@@ -430,8 +430,10 @@
   function waLink(text) { return `https://wa.me/${D.whatsapp}` + (text ? `?text=${encodeURIComponent(text)}` : ""); }
   function openWhatsApp(text) {
     const url = waLink(text);
-    const w = window.open(url, "_blank", "noopener");
-    if (!w) location.href = url;
+    // обычная ссылка надёжнее window.open: её не блокируют браузеры и встроенные просмотрщики
+    const a = document.createElement("a");
+    a.href = url; a.target = "_blank"; a.rel = "noopener";
+    document.body.appendChild(a); a.click(); a.remove();
   }
 
   /* ---------- Конструктор ---------- */
