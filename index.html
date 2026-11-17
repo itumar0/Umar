@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AZALIA — Coffee &amp; Dessert</title>
+  <meta name="description" content="AZALIA — кофейня-кондитерская. Чизкейки, завтраки, кофе и напитки. Заказ в WhatsApp.">
+  <meta name="theme-color" content="#FAEADC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ ШАПКА ============ -->
+<header class="header" id="top">
+  <div class="header__bar">
+    <a class="logo" href="#hero" aria-label="AZALIA — на главную">
+      <span class="logo__name">AZALIA</span>
+      <span class="logo__sub">Coffee &amp; Dessert</span>
+    </a>
+    <button class="cart-btn" id="cartOpen" aria-label="Открыть корзину">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Zm4 0V6.5a3 3 0 0 1 6 0V8"/></svg>
+      <span class="cart-btn__count" id="cartCount" hidden>0</span>
+    </button>
+  </div>
+  <nav class="tabs" aria-label="Разделы меню">
+    <div class="tabs__track" id="tabs">
+      <a href="#breakfast" class="tab">Завтраки</a>
+      <a href="#cheesecakes" class="tab">Чизкейки</a>
+      <a href="#builder" class="tab">Свой чизкейк</a>
+      <a href="#milkshakes" class="tab">Милкшейки</a>
+      <a href="#smoothies" class="tab">Смузи</a>
+      <a href="#cold" class="tab">Холодные</a>
+      <a href="#tea" class="tab">Чаи</a>
+      <a href="#coffee" class="tab">Кофе</a>
+      <a href="#contacts" class="tab">Контакты</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ ГЛАВНЫЙ ЭКРАН ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+      <div class="hero__text reveal">
+        <p class="eyebrow">Кофейня-кондитерская</p>
+        <h1 class="hero__title">AZALIA</h1>
+        <p class="hero__slogan">вкус, который хочется повторить</p>
+        <div class="hero__actions">
+          <a href="#breakfast" class="btn btn--primary">Смотреть меню</a>
+          <a href="#builder" class="btn btn--ghost">Собрать свой чизкейк</a>
+        </div>
+      </div>
+      <div class="hero__art reveal">
+        <img class="mascot" data-mascot="hero" alt="Лисичка Азалия за столиком с капучино и чизкейком" width="520" height="520" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ПЯТНИЧНЫЙ БАННЕР ============ -->
+  <div class="wrap" id="fridayBannerWrap" hidden>
+    <aside class="friday reveal">
+      <img class="friday__fox" data-mascot="sleep" alt="Спящая лисичка Азалия" width="160" height="160" loading="lazy">
+      <div>
+        <p class="friday__eyebrow">Только сегодня</p>
+        <h2 class="friday__title">Пятничная акция</h2>
+        <p class="friday__text">Все чизкейки — <b>200 сом</b>, Сан-Себастьян — <b>275 сом</b></p>
+        <a href="#cheesecakes" class="btn btn--light btn--sm">К чизкейкам</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ============ ЗАВТРАКИ ============ -->
+  <section class="section" id="breakfast">
+    <div class="wrap">
+      <header class="section__head reveal">
+        <h2 class="section__title">Завтраки</h2>
+        <span class="chip" id="breakfastChip">с 8:00 до 12:00</span>
+      </header>
+      <div class="grid grid--breakfast" id="breakfastGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ ЧИЗКЕЙКИ ============ -->
+  <section class="section section--alt" id="cheesecakes">
+    <div class="wrap">
+      <header class="section__head reveal">
+        <h2 class="section__title">Чизкейки</h2>
+      </header>
+      <div class="promo-strip reveal" id="bulkStrip">
+        <span class="promo-strip__num">10+</span>
+        <span>От 10 кусочков — <b>210 сом</b> за штуку</span>
+      </div>
+      <div class="grid grid--cakes" id="cakesGrid"></div>
+      <p class="fineprint" id="fridayFine" hidden>В дни пятничной акции скидка 8% по личной карте не действует.</p>
+    </div>
+  </section>
+
+  <!-- ============ КОНСТРУКТОР ============ -->
+  <section class="section" id="builder">
+    <div class="wrap wrap--narrow">
+      <header class="section__head section__head--col reveal">
+        <p class="eyebrow">Авторский чизкейк</p>
+        <h2 class="section__title">Соберите свой чизкейк</h2>
+        <p class="section__lead">Выберите размер, основу, начинку и декор — цена считается сразу.</p>
+      </header>
+      <form class="builder" id="builderForm" novalidate>
+        <fieldset class="step reveal">
+          <legend class="step__title"><span class="step__n">1</span>Размер</legend>
+          <div class="options options--3" id="bSize"></div>
+        </fieldset>
+        <fieldset class="step reveal">
+          <legend class="step__title"><span class="step__n">2</span>Основа</legend>
+          <div class="options options--2" id="bBase"></div>
+        </fieldset>
+        <fieldset class="step reveal">
+          <legend class="step__title"><span class="step__n">3</span>Начинка</legend>
+          <div class="options options--2" id="bFilling"></div>
+        </fieldset>
+        <fieldset class="step reveal">
+          <legend class="step__title"><span class="step__n">4</span>Топпинг и декор <small>можно несколько</small></legend>
+          <div class="options options--2" id="bTopping"></div>
+        </fieldset>
+        <fieldset class="step reveal">
+          <legend class="step__title"><span class="step__n">5</span>Детали</legend>
+          <label class="field" id="bTextField">
+            <span class="field__label">Надпись на торте</span>
+            <input type="text" id="bText" maxlength="40" placeholder="Например: С днём рождения, Аня!">
+          </label>
+          <div class="field-row">
+            <label class="field">
+              <span class="field__label">Дата получения</span>
+              <input type="date" id="bDate" required>
+            </label>
+            <label class="field">
+              <span class="field__label">Время</span>
+              <input type="time" id="bTime" required>
+            </label>
+          </div>
+          <label class="field">
+            <span class="field__label">Комментарий</span>
+            <textarea id="bComment" rows="3" placeholder="Пожелания по оформлению, аллергии…"></textarea>
+          </label>
+        </fieldset>
+        <div class="builder__total">
+          <div>
+            <span class="builder__total-label">Итого</span>
+            <span class="builder__total-sum" id="bTotal">0 сом</span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--wa">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#ic-wa"/></svg>
+            Заказать в WhatsApp
+          </button>
+        </div>
+        <p class="form-error" id="bError" role="alert" hidden></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ НАПИТКИ ============ -->
+  <section class="section section--alt" id="milkshakes">
+    <div class="wrap">
+      <header class="section__head reveal"><h2 class="section__title">Милкшейки</h2><span class="chip">0,3 л · 300 сом</span></header>
+      <div class="grid grid--drinks" data-list="milkshakes"></div>
+    </div>
+  </section>
+
+  <section class="section" id="smoothies">
+    <div class="wrap">
+      <header class="section__head reveal"><h2 class="section__title">Смузи</h2><span class="chip">0,3 л · 280 сом</span></header>
+      <div class="grid grid--drinks" data-list="smoothies"></div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="cold">
+    <div class="wrap">
+      <header class="section__head reveal"><h2 class="section__title">Холодные напитки</h2><span class="chip">0,3 л · 250 сом</span></header>
+      <div class="grid grid--drinks" data-list="cold"></div>
+    </div>
+  </section>
+
+  <section class="section" id="tea">
+    <div class="wrap">
+      <header class="section__head reveal"><h2 class="section__title">Горячие чаи</h2></header>
+      <div class="seg seg--full seg--tea reveal" id="teaToggle" role="radiogroup" aria-label="Объём чая"></div>
+      <div class="grid grid--drinks" data-list="tea"></div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="coffee">
+    <div class="wrap">
+      <header class="section__head reveal"><h2 class="section__title">Кофе</h2></header>
+      <div class="grid grid--drinks" data-list="coffee"></div>
+    </div>
+  </section>
+
+  <!-- ============ ЗАКАЗ ============ -->
+  <section class="section order-cta" id="order">
+    <div class="wrap">
+      <div class="order-cta__card reveal">
+        <img class="order-cta__fox" data-mascot="tray" alt="Лисичка Азалия с подносом" width="260" height="260" loading="lazy">
+        <div>
+          <h2 class="section__title">Как заказать</h2>
+          <ol class="howto">
+            <li>Добавьте десерты и напитки в корзину</li>
+            <li>Укажите имя, телефон и способ получения</li>
+            <li>Нажмите «Оформить в WhatsApp» — мы подтвердим заказ</li>
+          </ol>
+          <button class="btn btn--primary" data-open-cart>Открыть корзину</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ КОНТАКТЫ ============ -->
+  <section class="section section--dark" id="contacts">
+    <div class="wrap">
+      <header class="section__head reveal"><h2 class="section__title">Контакты</h2></header>
+      <div class="contacts reveal">
+        <ul class="contacts__list">
+          <li><span class="contacts__label">Адрес</span><span id="cAddress"></span></li>
+          <li><span class="contacts__label">Часы работы</span><span id="cHours"></span></li>
+          <li><span class="contacts__label">Телефон</span><a id="cPhone"></a></li>
+          <li><span class="contacts__label">Instagram</span><a id="cInsta" target="_blank" rel="noopener"></a></li>
+        </ul>
+        <a class="btn btn--primary btn--wa" id="cWa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#ic-wa"/></svg>
+          Написать в WhatsApp
+        </a>
+        <div class="map" id="map">
+          <button class="map__load" id="mapLoad">Показать карту</button>
+        </div>
+      </div>
+      <footer class="footer">
+        <span class="logo logo--light"><span class="logo__name">AZALIA</span><span class="logo__sub">Coffee &amp; Dessert</span></span>
+        <p>вкус, который хочется повторить</p>
+      </footer>
+    </div>
+  </section>
+</main>
+
+<!-- ============ ПЛАВАЮЩАЯ КНОПКА WHATSAPP ============ -->
+<div class="fab">
+  <img class="fab__fox" data-mascot="coffee" alt="" width="84" height="84" loading="lazy">
+  <a class="fab__btn" id="fabWa" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+    <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><use href="#ic-wa"/></svg>
+  </a>
+</div>
+
+<!-- Нижняя плашка корзины -->
+<button class="cartbar" id="cartBar" data-open-cart hidden>
+  <span class="cartbar__count" id="cartBarCount">0</span>
+  <span class="cartbar__label">Корзина</span>
+  <span class="cartbar__sum" id="cartBarSum">0 сом</span>
+</button>
+
+<!-- ============ КОРЗИНА ============ -->
+<div class="sheet" id="sheet" aria-hidden="true">
+  <div class="sheet__backdrop" data-close></div>
+  <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet__grip" aria-hidden="true"></div>
+    <div class="sheet__head">
+      <h2 class="sheet__title" id="sheetTitle">Ваш заказ</h2>
+      <button class="icon-btn" data-close aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="sheet__body" id="sheetBody">
+      <!-- пустая корзина -->
+      <div class="state" id="cartEmpty">
+        <img data-mascot="sleep" alt="Спящая лисичка" width="200" height="200" loading="lazy">
+        <h3>Корзина пока пуста</h3>
+        <p>Лисичка Азалия ждёт, когда вы выберете что-нибудь вкусное.</p>
+        <button class="btn btn--primary" data-close data-goto="#cheesecakes">К чизкейкам</button>
+      </div>
+
+      <!-- спасибо -->
+      <div class="state" id="cartThanks" hidden>
+        <img data-mascot="sleep" alt="Спящая лисичка" width="200" height="200" loading="lazy">
+        <h3>Спасибо за заказ!</h3>
+        <p>Мы открыли WhatsApp с готовым сообщением. Отправьте его — и мы скоро подтвердим заказ.</p>
+        <button class="btn btn--ghost" data-close>Вернуться в меню</button>
+      </div>
+
+      <!-- заполненная корзина -->
+      <div id="cartFull" hidden>
+        <ul class="cart-list" id="cartList"></ul>
+        <div class="cart-note" id="cartNote" hidden></div>
+
+        <form class="order-form" id="orderForm" novalidate>
+          <label class="field">
+            <span class="field__label">Имя</span>
+            <input type="text" id="oName" autocomplete="name" required placeholder="Как к вам обращаться">
+          </label>
+          <label class="field">
+            <span class="field__label">Телефон</span>
+            <input type="tel" id="oPhone" autocomplete="tel" inputmode="tel" required placeholder="+996 ___ ___ ___">
+          </label>
+          <div class="seg seg--full" role="radiogroup" aria-label="Способ получения">
+            <label class="seg__opt"><input type="radio" name="oType" value="pickup" checked><span>Самовывоз</span></label>
+            <label class="seg__opt"><input type="radio" name="oType" value="delivery"><span>Доставка</span></label>
+          </div>
+          <label class="field" id="oAddressField" hidden>
+            <span class="field__label">Адрес доставки</span>
+            <input type="text" id="oAddress" autocomplete="street-address" placeholder="Улица, дом, квартира">
+          </label>
+          <label class="field">
+            <span class="field__label">Время</span>
+            <input type="text" id="oTime" placeholder="Например: сегодня к 15:30 или «как можно скорее»">
+          </label>
+          <p class="form-error" id="oError" role="alert" hidden></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="sheet__foot" id="sheetFoot" hidden>
+      <div class="sheet__total"><span>Итого</span><b id="cartTotal">0 сом</b></div>
+      <button class="btn btn--primary btn--wa btn--block" id="orderSend">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#ic-wa"/></svg>
+        Оформить в WhatsApp
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Иконки -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 5.83 2.42 8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+</svg>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
