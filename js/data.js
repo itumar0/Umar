@@ -14,12 +14,15 @@ window.AZALIA = {
   map2gis: "https://2gis.kg/bishkek/geo/70000001109779369", // карточка «Азалия» в 2ГИС
   timezone: "Asia/Bishkek",
 
-  /* --- Маскот (положите файлы в images/mascot/) --- */
+  /* --- Маскот (images/mascot/) ---
+     Сейчас: лисичка спереди и в 3/4 из листа персонажа.
+     Когда появятся сцены (за столиком, с подносом, со стаканчиком, спящая) —
+     положите файлы и замените пути. */
   mascot: {
-    hero: "images/mascot/fox-table.png",     // за столиком с капучино и чизкейком
-    tray: "images/mascot/fox-tray.png",      // с подносом
-    coffee: "images/mascot/fox-coffee.png",  // со стаканчиком кофе
-    sleep: "images/mascot/fox-sleep.png"     // спящая
+    hero: "images/mascot/fox-front.png",    // главный экран
+    tray: "images/mascot/fox-34.png",       // блок «Как заказать»
+    coffee: "images/mascot/fox-front.png",  // у кнопки WhatsApp
+    sleep: "images/mascot/fox-34.png"       // пустая корзина, «спасибо», пятничный баннер
   },
 
   /* --- Правила цен на чизкейки --- */

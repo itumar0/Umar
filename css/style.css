@@ -471,3 +471,7 @@ body.in-builder .cartbar { opacity: 0; pointer-events: none; transform: translat
 .drink--photo .drink__content { padding: 6px 4px 4px 0; }
 .drink--photo .drink__row { flex-wrap: wrap; gap: 8px; }
 .drink--photo .drink__row .add-btn { flex: 1 1 auto; }
+
+/* Лисичка из листа персонажа: вертикальный рисунок */
+.hero__art .mascot { object-fit: contain; }
+.fab__fox { width: 56px; height: 76px; right: 46px; bottom: 34px; }
