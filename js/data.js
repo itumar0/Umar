@@ -11,7 +11,7 @@ window.AZALIA = {
   address: "г. Бишкек, ул. Примерная, 1",   // [ЗАМЕНИТЬ]
   hours: "Ежедневно 8:00 — 22:00",          // [ЗАМЕНИТЬ]
   instagram: "azalia.cheesecake",           // без @
-  mapQuery: "Бишкек",                       // [ЗАМЕНИТЬ] адрес/координаты для карты
+  map2gis: "https://2gis.kg/bishkek/geo/70000001109779369", // карточка «Азалия» в 2ГИС
   timezone: "Asia/Bishkek",
 
   /* --- Маскот (положите файлы в images/mascot/) --- */

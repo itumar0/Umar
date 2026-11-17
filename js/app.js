@@ -519,17 +519,7 @@
     const ig = $("#cInsta"); ig.textContent = "@" + D.instagram; ig.href = "https://instagram.com/" + D.instagram;
     $("#cWa").href = waLink("Здравствуйте! Пишу с сайта AZALIA.");
     $("#fabWa").href = waLink("Здравствуйте! Пишу с сайта AZALIA.");
-    const map = $("#map");
-    const loadMap = () => {
-      if (map.dataset.loaded) return;
-      map.dataset.loaded = "1";
-      map.innerHTML = `<iframe title="Карта: AZALIA" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=${encodeURIComponent(D.mapQuery)}&output=embed"></iframe>`;
-    };
-    $("#mapLoad").addEventListener("click", loadMap);
-    if ("IntersectionObserver" in window) {
-      const io = new IntersectionObserver((en) => { if (en[0].isIntersecting) { loadMap(); io.disconnect(); } }, { rootMargin: "300px" });
-      io.observe(map);
-    }
+    $("#map").href = D.map2gis;
   }
 
   /* ---------- Картинки, анимации, табы ---------- */
