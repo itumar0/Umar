@@ -461,3 +461,13 @@ body.in-builder .cartbar { opacity: 0; pointer-events: none; transform: translat
 }
 .card__media img { transform: scale(.94); }
 .card:hover .card__media img { transform: scale(.98); }
+
+/* Напитки с фото (милкшейки, смузи) */
+.drink__content { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 0; }
+.drink--photo { flex-direction: row; gap: 14px; padding: 12px; }
+.drink__media { flex: 0 0 34%; max-width: 150px; aspect-ratio: 3 / 4; border-radius: 16px; overflow: hidden; background: var(--pumpkin); }
+.drink__media img { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .4s; }
+.drink__media img.loaded { opacity: 1; }
+.drink--photo .drink__content { padding: 6px 4px 4px 0; }
+.drink--photo .drink__row { flex-wrap: wrap; gap: 8px; }
+.drink--photo .drink__row .add-btn { flex: 1 1 auto; }

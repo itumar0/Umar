@@ -195,13 +195,16 @@
           ${it.variants.map((v) => `<label class="seg__opt"><input type="radio" name="v-${it.id}" value="${v.key}" data-variant-for="${it.id}" ${v.key === vKey ? "checked" : ""}><span>${esc(v.label)}</span></label>`).join("")}
         </div>` : "";
       return `
-        <article class="drink reveal">
+        <article class="drink ${it.img ? "drink--photo" : ""} reveal">
+          ${it.img ? `<div class="drink__media"><img data-src="${esc(it.img)}" data-fallback="" alt="${esc(fullName(it))}" loading="lazy" width="300" height="400"></div>` : ""}
+          <div class="drink__content">
           <h3 class="drink__title">${esc(it.name)}${it.badge ? `<span class="badge-new">${esc(it.badge)}</span>` : ""}</h3>
           ${it.desc ? `<p class="drink__desc">${esc(it.desc)}</p>` : ""}
           ${seg}
           <div class="drink__row">
             <div class="price"><span class="price__now" data-price-for="${it.id}">${fmt(drinkPrice(it, vKey))}</span></div>
             <button class="add-btn" data-add="${it.id}" data-variant="${vKey || ""}">В корзину</button>
+          </div>
           </div>
         </article>`;
     }).join("");

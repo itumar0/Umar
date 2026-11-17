@@ -89,18 +89,18 @@ window.AZALIA = {
   milkshakes: {
     note: "0,3 л",
     items: [
-      { id: "m-choco", name: "Шоколадный", price: 300 },
-      { id: "m-oreo", name: "Орео милкшейк", price: 300 },
-      { id: "m-banana", name: "Банановый", price: 300 }
+      { id: "m-choco", img: "images/drinks/m-choco.jpg", name: "Шоколадный", price: 300 },
+      { id: "m-oreo", img: "images/drinks/m-oreo.jpg", name: "Орео милкшейк", price: 300 },
+      { id: "m-banana", img: "images/drinks/m-banana.jpg", name: "Банановый", price: 300 }
     ]
   },
   smoothies: {
     note: "0,3 л",
     items: [
-      { id: "s-berry", name: "Ягодный", price: 280, desc: "малина, клубника, смородина" },
-      { id: "s-choco", name: "Шоколадная зима", price: 280, desc: "банан, арахис, какао, мёд" },
-      { id: "s-tropic", name: "Тропическая зима", price: 280, desc: "манговое пюре, кокосовое молоко, банан, ваниль" },
-      { id: "s-pomegranate", name: "Гранатовый поцелуй", price: 280, desc: "гранат, малина, бананы, яблочный сок" }
+      { id: "s-berry", img: "images/drinks/s-berry.jpg", name: "Ягодный", price: 280, desc: "малина, клубника, смородина" },
+      { id: "s-choco", img: "images/drinks/s-choco.jpg", name: "Шоколадная зима", price: 280, desc: "банан, арахис, какао, мёд" },
+      { id: "s-tropic", img: "images/drinks/s-tropic.jpg", name: "Тропическая зима", price: 280, desc: "манговое пюре, кокосовое молоко, банан, ваниль" },
+      { id: "s-pomegranate", img: "images/drinks/s-pomegranate.jpg", name: "Гранатовый поцелуй", price: 280, desc: "гранат, малина, бананы, яблочный сок" }
     ]
   },
   cold: {
