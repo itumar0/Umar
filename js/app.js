@@ -105,9 +105,11 @@
   /* ---------- Цены ---------- */
   function cakeUnit(item, totalPieces) {
     const base = item.special ? P.special : P.regular;
-    if (FRIDAY) return { base, unit: item.special ? P.fridaySpecial : P.fridayRegular, tag: "Пятничная акция" };
-    if (totalPieces >= P.bulkFrom && (!item.special || P.bulkAppliesToSpecial)) return { base, unit: P.bulkPrice, tag: "Цена от " + P.bulkFrom + " шт" };
-    return { base, unit: base, tag: null };
+    const opts = [{ base, unit: base, tag: null }];
+    if (FRIDAY) opts.push({ base, unit: item.special ? P.fridaySpecial : P.fridayRegular, tag: "Пятничная акция" });
+    if (totalPieces >= P.bulkFrom && (!item.special || P.bulkAppliesToSpecial)) opts.push({ base, unit: P.bulkPrice, tag: "Цена от " + P.bulkFrom + " шт" });
+    // применяется самая выгодная для гостя цена
+    return opts.reduce((a, b) => (b.unit < a.unit ? b : a));
   }
   function computeCart() {
     const pieces = cart.reduce((s, l) => s + (catalog[l.id].cat === "cheesecake" ? l.qty : 0), 0);

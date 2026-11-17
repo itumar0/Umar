@@ -10,7 +10,7 @@ window.AZALIA = {
   phoneDisplay: "+996 707 739 707",
   address: "г. Бишкек, ул. Примерная, 1",   // [ЗАМЕНИТЬ]
   hours: "Ежедневно 8:00 — 22:00",          // [ЗАМЕНИТЬ]
-  instagram: "azalia.kg",                   // [ЗАМЕНИТЬ] без @
+  instagram: "azalia.cheesecake",           // без @
   mapQuery: "Бишкек",                       // [ЗАМЕНИТЬ] адрес/координаты для карты
   timezone: "Asia/Bishkek",
 
@@ -28,7 +28,7 @@ window.AZALIA = {
     special: 300,            // Сан-Себастьян
     bulkFrom: 10,            // от скольких кусочков
     bulkPrice: 210,
-    bulkAppliesToSpecial: false, // true — Сан-Себастьян тоже по 210 от 10 шт
+    bulkAppliesToSpecial: true,  // false — Сан-Себастьян не участвует в цене от 10 шт
     fridayRegular: 200,
     fridaySpecial: 275
   },
